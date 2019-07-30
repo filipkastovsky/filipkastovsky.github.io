@@ -437,6 +437,11 @@ body .slide-up {
   z-index: 10;
 }
 
+.react-wrapper-desktop header .logo {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 4vw;
+}
+
 .react-wrapper-desktop header .header-title {
   font-size: 1.75vw;
   cursor: pointer;

@@ -16,7 +16,7 @@ class HeaderDesktop extends Component {
   render() {
     return (
       <header>
-        <h2 style={{ fontFamily: 'Arial' }}>&lt;/&gt;</h2>
+        <h2 className="logo">&lt;/&gt;</h2>
         <h2
           className={`header-title ${this.state.showName ? 'shown' : 'hidden'}`}
         >
