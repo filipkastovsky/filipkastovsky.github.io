@@ -183,7 +183,6 @@ body {
       .projects-list {
         width: 100vw;
         height: 67.5vh;
-
         overflow-y: scroll;
 
         .projects-item {
@@ -193,7 +192,7 @@ body {
             object-fit: fill;
             object-position: center;
             width: 100vw;
-            height: 29vw;
+            height: 29vh;
           }
 
           .projects-text {
@@ -222,7 +221,7 @@ body {
               display: flex;
               justify-content: space-around;
               align-items: center;
-              height: 7.5vw;
+              height: 7.5vh;
               a {
                 text-decoration: none;
               }
