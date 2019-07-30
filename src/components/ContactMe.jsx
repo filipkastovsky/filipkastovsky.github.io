@@ -22,7 +22,7 @@ const ContactMe = () => {
 
         <ul className="contactMe-list">
           <li className="contactMe-item">
-            <a href="mailto:dev.filip.kastovsky@gmail.com">
+            <a href="mailto:devfilipkastovsky@gmail.com">
               <img src={emailIcon} alt="Email" />
             </a>
           </li>
