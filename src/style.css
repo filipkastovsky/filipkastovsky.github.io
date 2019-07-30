@@ -1,0 +1,929 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  max-height: 100vh;
+  width: 100vw;
+  background: #00c2ff;
+  overflow: hidden;
+}
+
+body a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body .react-wrapper-mobile header {
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: -10vh;
+  position: fixed;
+  height: 10vh;
+  width: 100vw;
+  background: #00c2ff;
+  display: flex;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .react-wrapper-mobile header .header-title {
+  color: #ffffff;
+  font-size: 4vw;
+}
+
+body .react-wrapper-mobile header .burger {
+  margin-left: 10vw;
+  cursor: pointer;
+}
+
+body .react-wrapper-mobile header .burger .burger-line {
+  height: 3px;
+  width: 4vh;
+  margin: 5px;
+  background: #ffffff;
+}
+
+body .react-wrapper-mobile .intro {
+  margin-top: 10vh;
+  color: white;
+  height: 90vh;
+  background: #00c2ff;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .react-wrapper-mobile .intro .title {
+  font-size: 8vw;
+  font-weight: bold;
+}
+
+body .react-wrapper-mobile .intro img {
+  margin-left: 40vw;
+  margin-top: 12vh;
+  height: 85vw;
+  width: 85vw;
+  border-radius: 50%;
+}
+
+body .react-wrapper-mobile nav {
+  height: 90vh;
+  background: #ffffff;
+  margin-top: 10vh;
+}
+
+body .react-wrapper-mobile nav .nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 90vh;
+  color: #00c2ff;
+  list-style: none;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+  font-size: 5vw;
+}
+
+body .react-wrapper-mobile nav .nav-list :hover {
+  border-left: solid 4px;
+  padding-left: 10px;
+}
+
+body .react-wrapper-mobile .about {
+  height: 90vh;
+  background: #00c2ff;
+  margin-top: 10vh;
+}
+
+body .react-wrapper-mobile .about .nav-list {
+  height: 22.5vh;
+}
+
+body .react-wrapper-mobile .about .about-list {
+  height: 67.5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #00c2ff;
+  color: #ffffff;
+  list-style: none;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 4vw;
+  text-align: center;
+  padding: 0 5vh;
+}
+
+body .react-wrapper-mobile .skills {
+  height: 90vh;
+  background: #00c2ff;
+  margin-top: 10vh;
+}
+
+body .react-wrapper-mobile .skills nav,
+body .react-wrapper-mobile .skills .nav-list {
+  height: 22.5vh;
+}
+
+body .react-wrapper-mobile .skills .skills-list {
+  height: 16.875vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #00c2ff;
+  color: #ffffff;
+  list-style: none;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 4vw;
+  text-align: center;
+  padding: 0 5vh;
+}
+
+body .react-wrapper-mobile .skills .logos {
+  height: 50.625vh;
+  width: 100vw;
+  background: #00c2ff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 5vh;
+  padding-top: 0vh;
+}
+
+body .react-wrapper-mobile .skills .logos a {
+  height: 50px;
+  margin: 2vh;
+  cursor: pointer;
+}
+
+body .react-wrapper-mobile .skills .logos a :hover {
+  -webkit-filter: grayscale(100);
+          filter: grayscale(100);
+}
+
+body .react-wrapper-mobile .skills .logos a img {
+  height: inherit;
+  -webkit-filter: drop-shadow(#666666 10px 10px 4px);
+          filter: drop-shadow(#666666 10px 10px 4px);
+}
+
+body .react-wrapper-mobile .projects {
+  height: 90vh;
+  margin-top: 10vh;
+}
+
+body .react-wrapper-mobile .projects nav,
+body .react-wrapper-mobile .projects .nav-list {
+  height: 22.5vh;
+}
+
+body .react-wrapper-mobile .projects .projects-list {
+  width: 100vw;
+  height: 67.5vh;
+  overflow-y: scroll;
+}
+
+body .react-wrapper-mobile .projects .projects-list .projects-item {
+  height: 30vh;
+}
+
+body .react-wrapper-mobile .projects .projects-list .projects-item img {
+  -o-object-fit: fill;
+     object-fit: fill;
+  -o-object-position: center;
+     object-position: center;
+  width: 100vw;
+  height: 29vh;
+}
+
+body .react-wrapper-mobile .projects .projects-list .projects-item .projects-text {
+  position: relative;
+  margin-top: -30vh;
+  height: 30vh;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+body .react-wrapper-mobile .projects .projects-list .projects-item .projects-text .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  height: 10vh;
+}
+
+body .react-wrapper-mobile .projects .projects-list .projects-item .projects-text .description {
+  text-align: center;
+  padding: 0 5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 12.5vh;
+}
+
+body .react-wrapper-mobile .projects .projects-list .projects-item .projects-text .links {
+  background: #666666;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 7.5vh;
+}
+
+body .react-wrapper-mobile .projects .projects-list .projects-item .projects-text .links a {
+  text-decoration: none;
+}
+
+body .react-wrapper-mobile .projects .projects-list .projects-item .projects-text .links .view-app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+
+body .react-wrapper-mobile .projects .projects-list .projects-item .projects-text .links .view-code {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+}
+
+body .react-wrapper-mobile .contactMe {
+  height: 90vh;
+  margin-top: 10vh;
+  background: #00c2ff;
+}
+
+body .react-wrapper-mobile .contactMe nav,
+body .react-wrapper-mobile .contactMe .nav-list {
+  height: 22.5vh;
+}
+
+body .react-wrapper-mobile .contactMe .contactMe-list {
+  padding: 2.5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 15vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  list-style: none;
+}
+
+body .react-wrapper-mobile .contactMe .contactMe-list .contactMe-item a :hover {
+  -webkit-filter: grayscale(100);
+          filter: grayscale(100);
+}
+
+body .react-wrapper-mobile .contactMe .contactMe-list .contactMe-item a img {
+  width: 20vw;
+  -webkit-filter: drop-shadow(5px 5px 5px #666666);
+          filter: drop-shadow(5px 5px 5px #666666);
+}
+
+body .react-wrapper-mobile .contactMe .resume {
+  padding: 2.5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 27.5vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body .react-wrapper-mobile .contactMe .resume a :hover {
+  -webkit-filter: grayscale(100);
+          filter: grayscale(100);
+}
+
+body .react-wrapper-mobile .contactMe .resume a img {
+  width: 40vw;
+  -webkit-filter: drop-shadow(5px 5px 5px #666666);
+          filter: drop-shadow(5px 5px 5px #666666);
+}
+
+body .react-wrapper-mobile .contactMe .contactMe-text {
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #00c2ff;
+  color: #ffffff;
+  list-style: none;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 4vw;
+  text-align: center;
+  padding: 0 5vh;
+}
+
+body .slide-down {
+  -webkit-animation: slide-down 0.75s ease-out;
+          animation: slide-down 0.75s ease-out;
+}
+
+body .slide-up {
+  -webkit-animation: slide-up 0.75s ease-out;
+          animation: slide-up 0.75s ease-out;
+}
+
+.react-wrapper-desktop header {
+  height: 10vh;
+  background: #00c2ff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: #ffffff;
+}
+
+.react-wrapper-desktop header .header-title {
+  font-size: 1.75vw;
+  cursor: pointer;
+}
+
+.react-wrapper-desktop header .nav-list {
+  height: 100%;
+  width: 65vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  list-style: none;
+  font-weight: normal;
+  font-size: 1.75vw;
+}
+
+.react-wrapper-desktop header .nav-list :hover {
+  border-bottom: solid 1px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.react-wrapper-desktop .intro {
+  color: white;
+  height: 90vh;
+  background: #00c2ff;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.react-wrapper-desktop .intro .title {
+  font-size: 2vw;
+  font-weight: bold;
+}
+
+.react-wrapper-desktop .intro img {
+  margin: 10vw;
+  height: 32.5vw;
+  width: 32.5vw;
+  border-radius: 50%;
+}
+
+.react-wrapper-desktop .about {
+  height: 90vh;
+  background: #00c2ff;
+}
+
+.react-wrapper-desktop .about .nav-list {
+  display: none;
+  height: 22.5vh;
+}
+
+.react-wrapper-desktop .about .about-list {
+  height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #00c2ff;
+  color: #ffffff;
+  list-style: none;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.75vw;
+  text-align: center;
+  padding: 10vh 5vh;
+}
+
+.react-wrapper-desktop .skills {
+  height: 90vh;
+  background: #00c2ff;
+}
+
+.react-wrapper-desktop .skills nav,
+.react-wrapper-desktop .skills .nav-list {
+  display: none;
+  height: 22.5vh;
+}
+
+.react-wrapper-desktop .skills .skills-list {
+  height: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #00c2ff;
+  color: #ffffff;
+  list-style: none;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.75vw;
+  text-align: center;
+  padding: 0 5vh;
+  padding-top: 20vh;
+}
+
+.react-wrapper-desktop .skills .logos {
+  margin-top: 10vh;
+  height: 40vh;
+  width: 100vw;
+  background: #00c2ff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0 25vw;
+}
+
+.react-wrapper-desktop .skills .logos a {
+  height: 50px;
+  margin: 2vh;
+  cursor: pointer;
+}
+
+.react-wrapper-desktop .skills .logos a :hover {
+  -webkit-filter: grayscale(100);
+          filter: grayscale(100);
+}
+
+.react-wrapper-desktop .skills .logos a img {
+  height: 10vh;
+  -webkit-filter: drop-shadow(#666666 10px 10px 4px);
+          filter: drop-shadow(#666666 10px 10px 4px);
+}
+
+.react-wrapper-desktop .projects {
+  height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.react-wrapper-desktop .projects nav,
+.react-wrapper-desktop .projects .nav-list {
+  display: none;
+  height: 22.5vh;
+}
+
+.react-wrapper-desktop .projects .projects-list::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.react-wrapper-desktop .projects .projects-list {
+  border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 60vw;
+  height: 70vh;
+  padding: 3vw;
+  background: #ffffff;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  list-style: none;
+  text-align: center;
+  cursor: n-resize;
+}
+
+.react-wrapper-desktop .projects .projects-list .projects-item {
+  padding: 10vh;
+  width: 100%;
+}
+
+.react-wrapper-desktop .projects .projects-list .projects-item img {
+  border-radius: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  height: 25vh;
+  width: 30vw;
+}
+
+.react-wrapper-desktop .projects .projects-list .projects-item .projects-text .title {
+  color: #666666;
+  font-size: 2vw;
+}
+
+.react-wrapper-desktop .projects .projects-list .projects-item .projects-text .description {
+  padding: 2vh;
+  font-size: 1vw;
+}
+
+.react-wrapper-desktop .projects .projects-list .projects-item .projects-text .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1vw;
+  width: 100%;
+  height: 7vh;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.react-wrapper-desktop .projects .projects-list .projects-item .projects-text .links :hover {
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  -webkit-box-shadow: #666666 0px 0px 1vh;
+          box-shadow: #666666 0px 0px 1vh;
+  border: 1vh solid;
+}
+
+.react-wrapper-desktop .projects .projects-list .projects-item .projects-text .links a {
+  text-decoration: none;
+}
+
+.react-wrapper-desktop .projects .projects-list .projects-item .projects-text .links .view-app {
+  width: 50%;
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #666666;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.react-wrapper-desktop .projects .projects-list .projects-item .projects-text .links .view-code {
+  width: 50%;
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #666666;
+}
+
+.react-wrapper-desktop .contactMe {
+  height: 90vh;
+  padding: 5vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background: #00c2ff;
+}
+
+.react-wrapper-desktop .contactMe nav,
+.react-wrapper-desktop .contactMe .nav-list {
+  display: none;
+}
+
+.react-wrapper-desktop .contactMe .contacts-wrapper {
+  width: 50vw;
+}
+
+.react-wrapper-desktop .contactMe .contacts-wrapper .contactMe-list {
+  width: 50vw;
+  padding: 2.5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 60vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  list-style: none;
+}
+
+.react-wrapper-desktop .contactMe .contacts-wrapper .contactMe-list .contactMe-item a :hover {
+  -webkit-filter: grayscale(100);
+          filter: grayscale(100);
+}
+
+.react-wrapper-desktop .contactMe .contacts-wrapper .contactMe-list .contactMe-item a img {
+  width: 10vw;
+  -webkit-filter: drop-shadow(5px 5px 5px #666666);
+          filter: drop-shadow(5px 5px 5px #666666);
+}
+
+.react-wrapper-desktop .contactMe .resume-wrapper {
+  width: 50vw;
+}
+
+.react-wrapper-desktop .contactMe .resume-wrapper .resume {
+  padding: 2.5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50vw;
+  height: 60vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.react-wrapper-desktop .contactMe .resume-wrapper .resume a :hover {
+  -webkit-filter: grayscale(100);
+          filter: grayscale(100);
+}
+
+.react-wrapper-desktop .contactMe .resume-wrapper .resume a img {
+  width: 20vw;
+  -webkit-filter: drop-shadow(5px 5px 5px #666666);
+          filter: drop-shadow(5px 5px 5px #666666);
+}
+
+.react-wrapper-desktop .contactMe .contactMe-text {
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #00c2ff;
+  color: #ffffff;
+  list-style: none;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.75vw;
+  text-align: center;
+  padding: 5vh;
+}
+
+.react-wrapper-desktop .slide-left {
+  -webkit-animation: slide-left 0.75s ease-out;
+          animation: slide-left 0.75s ease-out;
+}
+
+.react-wrapper-desktop .slide-right {
+  -webkit-animation: slide-right 0.75s ease-out;
+          animation: slide-right 0.75s ease-out;
+}
+
+.hidden {
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  opacity: 0;
+  z-index: -1;
+}
+
+.shown {
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+  opacity: 100;
+  z-index: 1;
+}
+
+@-webkit-keyframes slide-up {
+  from {
+    -webkit-transform: translateY(100vh);
+            transform: translateY(100vh);
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    -webkit-transform: translateY(100vh);
+            transform: translateY(100vh);
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@-webkit-keyframes slide-left {
+  from {
+    -webkit-transform: translateX(100vh);
+            transform: translateX(100vh);
+  }
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes slide-left {
+  from {
+    -webkit-transform: translateX(100vh);
+            transform: translateX(100vh);
+  }
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@-webkit-keyframes slide-down {
+  from {
+    -webkit-transform: translateY(-100vh);
+            transform: translateY(-100vh);
+  }
+  to {
+    -webkit-transform: translateY(0vh);
+            transform: translateY(0vh);
+  }
+}
+
+@keyframes slide-down {
+  from {
+    -webkit-transform: translateY(-100vh);
+            transform: translateY(-100vh);
+  }
+  to {
+    -webkit-transform: translateY(0vh);
+            transform: translateY(0vh);
+  }
+}
+
+@-webkit-keyframes slide-right {
+  from {
+    -webkit-transform: translateX(-100vh);
+            transform: translateX(-100vh);
+  }
+  to {
+    -webkit-transform: translateX(0vh);
+            transform: translateX(0vh);
+  }
+}
+
+@keyframes slide-right {
+  from {
+    -webkit-transform: translateX(-100vh);
+            transform: translateX(-100vh);
+  }
+  to {
+    -webkit-transform: translateX(0vh);
+            transform: translateX(0vh);
+  }
+}
+/*# sourceMappingURL=style.css.map */
