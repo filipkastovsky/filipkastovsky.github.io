@@ -6,17 +6,27 @@ import { Link } from 'react-router-dom';
 import NavMobile from './NavMobile';
 
 class HeaderMobile extends Component {
-  state = { nav: false };
+  state = { showName: false, nav: false };
 
   toggleNav = () => {
-    this.setState({ nav: !this.state.nav });
+    this.setState({ showName: true, nav: !this.state.nav });
   };
+
+  componentDidMount() {
+    window.location.href.split('/').pop() === ''
+      ? this.setState({ showName: false })
+      : this.setState({ showName: true });
+  }
 
   render() {
     return (
       <div>
         <header>
-          <h2 className="header-title shown">
+          <h2
+            className={`header-title ${
+              this.state.showName ? 'shown' : 'hidden'
+            }`}
+          >
             <Link to="/">// FILIP_KAŠTOVSKÝ</Link>
           </h2>
           <div className="burger" onClick={this.toggleNav}>

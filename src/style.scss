@@ -183,6 +183,7 @@ body {
       .projects-list {
         width: 100vw;
         height: 67.5vh;
+
         overflow-y: scroll;
 
         .projects-item {
@@ -192,12 +193,12 @@ body {
             object-fit: fill;
             object-position: center;
             width: 100vw;
-            height: 29vh;
+            height: 29vw;
           }
 
           .projects-text {
             position: relative;
-            margin-top: -30vh;
+            top: -30vh;
             height: 30vh;
             background: rgba($color: #ffffff, $alpha: 0.8);
 
@@ -221,7 +222,7 @@ body {
               display: flex;
               justify-content: space-around;
               align-items: center;
-              height: 7.5vh;
+              height: 7.5vw;
               a {
                 text-decoration: none;
               }
@@ -321,6 +322,7 @@ body {
     align-items: center;
     justify-content: space-around;
     color: #ffffff;
+    z-index: 10;
 
     .header-title {
       font-size: 1.75vw;
@@ -350,10 +352,17 @@ body {
       }
     }
   }
+  .bg-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+  }
   .intro {
     color: white;
     height: 90vh;
-    background: $bgcyan;
     overflow: hidden;
     display: flex;
     justify-content: center;
