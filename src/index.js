@@ -16,7 +16,7 @@ ReactDOM.render(
     <Route exact path="/about" component={AboutPage} />
     <Route exact path="/skills" component={SkillsPage} />
     <Route exact path="/projects" component={ProjectsPage} />
-    <Route exact path="/contact" component={ContactMePage} />
+    <Route exact path="/contact-me" component={ContactMePage} />
   </BrowserRouter>,
   document.querySelector('#root')
 );
