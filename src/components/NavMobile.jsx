@@ -14,7 +14,7 @@ const NavMobile = () => (
         <Link to="/projects">projects_</Link>
       </li>
       <li className="nav-item">
-        <Link to="/contact">contactMe_</Link>
+        <Link to="/contact-me">contactMe_</Link>
       </li>
     </ul>
   </nav>
