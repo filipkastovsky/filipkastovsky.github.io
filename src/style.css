@@ -330,18 +330,18 @@ body .react-wrapper-mobile .projects .projects-list .projects-item .projects-tex
   color: white;
 }
 
-body .react-wrapper-mobile .contactMe {
+body .react-wrapper-mobile .projects .contactMe {
   height: 90vh;
   margin-top: 10vh;
   background: #00c2ff;
 }
 
-body .react-wrapper-mobile .contactMe nav,
-body .react-wrapper-mobile .contactMe .nav-list {
+body .react-wrapper-mobile .projects .contactMe nav,
+body .react-wrapper-mobile .projects .contactMe .nav-list {
   height: 22.5vh;
 }
 
-body .react-wrapper-mobile .contactMe .contactMe-list {
+body .react-wrapper-mobile .projects .contactMe .contactMe-list {
   padding: 2.5vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -356,18 +356,18 @@ body .react-wrapper-mobile .contactMe .contactMe-list {
   list-style: none;
 }
 
-body .react-wrapper-mobile .contactMe .contactMe-list .contactMe-item a :hover {
+body .react-wrapper-mobile .projects .contactMe .contactMe-list .contactMe-item a :hover {
   -webkit-filter: grayscale(100);
           filter: grayscale(100);
 }
 
-body .react-wrapper-mobile .contactMe .contactMe-list .contactMe-item a img {
+body .react-wrapper-mobile .projects .contactMe .contactMe-list .contactMe-item a img {
   width: 20vw;
   -webkit-filter: drop-shadow(5px 5px 5px #666666);
           filter: drop-shadow(5px 5px 5px #666666);
 }
 
-body .react-wrapper-mobile .contactMe .resume {
+body .react-wrapper-mobile .projects .contactMe .resume {
   padding: 2.5vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -381,18 +381,18 @@ body .react-wrapper-mobile .contactMe .resume {
       justify-content: space-around;
 }
 
-body .react-wrapper-mobile .contactMe .resume a :hover {
+body .react-wrapper-mobile .projects .contactMe .resume a :hover {
   -webkit-filter: grayscale(100);
           filter: grayscale(100);
 }
 
-body .react-wrapper-mobile .contactMe .resume a img {
+body .react-wrapper-mobile .projects .contactMe .resume a img {
   width: 40vw;
   -webkit-filter: drop-shadow(5px 5px 5px #666666);
           filter: drop-shadow(5px 5px 5px #666666);
 }
 
-body .react-wrapper-mobile .contactMe .contactMe-text {
+body .react-wrapper-mobile .projects .contactMe .contactMe-text {
   height: 10vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -414,17 +414,17 @@ body .react-wrapper-mobile .contactMe .contactMe-text {
   padding: 0 5vh;
 }
 
-body .slide-down {
+body .react-wrapper-mobile .slide-down {
   -webkit-animation: slide-down 0.75s ease-out;
           animation: slide-down 0.75s ease-out;
 }
 
-body .slide-up {
+body .react-wrapper-mobile .slide-up {
   -webkit-animation: slide-up 0.75s ease-out;
           animation: slide-up 0.75s ease-out;
 }
 
-.react-wrapper-desktop header {
+body .react-wrapper-desktop header {
   height: 10vh;
   background: #00c2ff;
   display: -webkit-box;
@@ -439,23 +439,23 @@ body .slide-up {
   z-index: 10;
 }
 
-.react-wrapper-desktop header .logo {
+body .react-wrapper-desktop header .logo {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 4vw;
 }
 
-.react-wrapper-desktop header .header-title {
+body .react-wrapper-desktop header .header-title {
   font-size: 1.75vw;
   cursor: pointer;
 }
 
-.react-wrapper-desktop header .header-title :hover {
+body .react-wrapper-desktop header .header-title :hover {
   font-size: 2vw;
   -webkit-transition: font-size 1s;
   transition: font-size 1s;
 }
 
-.react-wrapper-desktop header .nav-list {
+body .react-wrapper-desktop header .nav-list {
   height: 100%;
   width: 65vw;
   display: -webkit-box;
@@ -471,7 +471,7 @@ body .slide-up {
   font-size: 1.75vw;
 }
 
-.react-wrapper-desktop header .nav-list :hover {
+body .react-wrapper-desktop header .nav-list :hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   -webkit-transition: -webkit-transform 1s;
@@ -481,7 +481,7 @@ body .slide-up {
   cursor: pointer;
 }
 
-.react-wrapper-desktop .bg-video {
+body .react-wrapper-desktop .bg-video {
   position: fixed;
   right: 0;
   bottom: 0;
@@ -490,7 +490,7 @@ body .slide-up {
   z-index: -1;
 }
 
-.react-wrapper-desktop .intro {
+body .react-wrapper-desktop .intro {
   color: white;
   height: 90vh;
   overflow: hidden;
@@ -505,34 +505,34 @@ body .slide-up {
           align-items: center;
 }
 
-.react-wrapper-desktop .intro .title {
+body .react-wrapper-desktop .intro .title {
   font-size: 2vw;
   font-weight: bold;
 }
 
-.react-wrapper-desktop .intro .description {
+body .react-wrapper-desktop .intro .description {
   font-size: 1.5vw;
   font-weight: normal;
 }
 
-.react-wrapper-desktop .intro img {
+body .react-wrapper-desktop .intro img {
   margin: 10vw;
   height: 32.5vw;
   width: 32.5vw;
   border-radius: 50%;
 }
 
-.react-wrapper-desktop .about {
+body .react-wrapper-desktop .about {
   height: 90vh;
   background: #00c2ff;
 }
 
-.react-wrapper-desktop .about .nav-list {
+body .react-wrapper-desktop .about .nav-list {
   display: none;
   height: 22.5vh;
 }
 
-.react-wrapper-desktop .about .about-list {
+body .react-wrapper-desktop .about .about-list {
   height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -554,18 +554,18 @@ body .slide-up {
   padding: 10vh 5vh;
 }
 
-.react-wrapper-desktop .skills {
+body .react-wrapper-desktop .skills {
   height: 90vh;
   background: #00c2ff;
 }
 
-.react-wrapper-desktop .skills nav,
-.react-wrapper-desktop .skills .nav-list {
+body .react-wrapper-desktop .skills nav,
+body .react-wrapper-desktop .skills .nav-list {
   display: none;
   height: 22.5vh;
 }
 
-.react-wrapper-desktop .skills .skills-list {
+body .react-wrapper-desktop .skills .skills-list {
   height: 20vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -588,7 +588,7 @@ body .slide-up {
   padding-top: 20vh;
 }
 
-.react-wrapper-desktop .skills .logos {
+body .react-wrapper-desktop .skills .logos {
   margin-top: 10vh;
   height: 40vh;
   width: 100vw;
@@ -606,24 +606,24 @@ body .slide-up {
   padding: 0 25vw;
 }
 
-.react-wrapper-desktop .skills .logos a {
+body .react-wrapper-desktop .skills .logos a {
   height: 50px;
   margin: 2vh;
   cursor: pointer;
 }
 
-.react-wrapper-desktop .skills .logos a :hover {
+body .react-wrapper-desktop .skills .logos a :hover {
   -webkit-filter: grayscale(100);
           filter: grayscale(100);
 }
 
-.react-wrapper-desktop .skills .logos a img {
+body .react-wrapper-desktop .skills .logos a img {
   height: 10vh;
   -webkit-filter: drop-shadow(#666666 10px 10px 4px);
           filter: drop-shadow(#666666 10px 10px 4px);
 }
 
-.react-wrapper-desktop .projects {
+body .react-wrapper-desktop .projects {
   height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -636,18 +636,18 @@ body .slide-up {
           align-items: center;
 }
 
-.react-wrapper-desktop .projects nav,
-.react-wrapper-desktop .projects .nav-list {
+body .react-wrapper-desktop .projects nav,
+body .react-wrapper-desktop .projects .nav-list {
   display: none;
   height: 22.5vh;
 }
 
-.react-wrapper-desktop .projects .projects-list::-webkit-scrollbar {
+body .react-wrapper-desktop .projects .projects-list::-webkit-scrollbar {
   width: 0;
   height: 0;
 }
 
-.react-wrapper-desktop .projects .projects-list {
+body .react-wrapper-desktop .projects .projects-list {
   border-radius: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -672,12 +672,12 @@ body .slide-up {
   cursor: n-resize;
 }
 
-.react-wrapper-desktop .projects .projects-list .projects-item {
+body .react-wrapper-desktop .projects .projects-list .projects-item {
   padding: 10vh;
   width: 100%;
 }
 
-.react-wrapper-desktop .projects .projects-list .projects-item img {
+body .react-wrapper-desktop .projects .projects-list .projects-item img {
   border-radius: 10px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -687,21 +687,21 @@ body .slide-up {
   width: 30vw;
 }
 
-.react-wrapper-desktop .projects .projects-list .projects-item .projects-text {
+body .react-wrapper-desktop .projects .projects-list .projects-item .projects-text {
   margin-top: 2vh;
 }
 
-.react-wrapper-desktop .projects .projects-list .projects-item .projects-text .title {
+body .react-wrapper-desktop .projects .projects-list .projects-item .projects-text .title {
   color: #666666;
   font-size: 2vw;
 }
 
-.react-wrapper-desktop .projects .projects-list .projects-item .projects-text .description {
+body .react-wrapper-desktop .projects .projects-list .projects-item .projects-text .description {
   padding: 2vh;
   font-size: 1vw;
 }
 
-.react-wrapper-desktop .projects .projects-list .projects-item .projects-text .links {
+body .react-wrapper-desktop .projects .projects-list .projects-item .projects-text .links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -712,7 +712,7 @@ body .slide-up {
       justify-content: space-around;
 }
 
-.react-wrapper-desktop .projects .projects-list .projects-item .projects-text .links :hover {
+body .react-wrapper-desktop .projects .projects-list .projects-item .projects-text .links :hover {
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
   -webkit-box-shadow: #666666 0px 0px 1vh;
@@ -720,11 +720,11 @@ body .slide-up {
   border: 1vh solid;
 }
 
-.react-wrapper-desktop .projects .projects-list .projects-item .projects-text .links a {
+body .react-wrapper-desktop .projects .projects-list .projects-item .projects-text .links a {
   text-decoration: none;
 }
 
-.react-wrapper-desktop .projects .projects-list .projects-item .projects-text .links .view-app {
+body .react-wrapper-desktop .projects .projects-list .projects-item .projects-text .links .view-app {
   width: 50%;
   height: inherit;
   display: -webkit-box;
@@ -741,7 +741,7 @@ body .slide-up {
   color: #ffffff;
 }
 
-.react-wrapper-desktop .projects .projects-list .projects-item .projects-text .links .view-code {
+body .react-wrapper-desktop .projects .projects-list .projects-item .projects-text .links .view-code {
   width: 50%;
   height: inherit;
   display: -webkit-box;
@@ -756,7 +756,7 @@ body .slide-up {
   color: #666666;
 }
 
-.react-wrapper-desktop .contactMe {
+body .react-wrapper-desktop .contactMe {
   height: 90vh;
   padding: 5vh;
   width: 100vw;
@@ -773,16 +773,16 @@ body .slide-up {
   background: #00c2ff;
 }
 
-.react-wrapper-desktop .contactMe nav,
-.react-wrapper-desktop .contactMe .nav-list {
+body .react-wrapper-desktop .contactMe nav,
+body .react-wrapper-desktop .contactMe .nav-list {
   display: none;
 }
 
-.react-wrapper-desktop .contactMe .contacts-wrapper {
+body .react-wrapper-desktop .contactMe .contacts-wrapper {
   width: 50vw;
 }
 
-.react-wrapper-desktop .contactMe .contacts-wrapper .contactMe-list {
+body .react-wrapper-desktop .contactMe .contacts-wrapper .contactMe-list {
   width: 50vw;
   padding: 2.5vh;
   display: -webkit-box;
@@ -797,22 +797,22 @@ body .slide-up {
   list-style: none;
 }
 
-.react-wrapper-desktop .contactMe .contacts-wrapper .contactMe-list .contactMe-item a :hover {
+body .react-wrapper-desktop .contactMe .contacts-wrapper .contactMe-list .contactMe-item a :hover {
   -webkit-filter: grayscale(100);
           filter: grayscale(100);
 }
 
-.react-wrapper-desktop .contactMe .contacts-wrapper .contactMe-list .contactMe-item a img {
+body .react-wrapper-desktop .contactMe .contacts-wrapper .contactMe-list .contactMe-item a img {
   width: 10vw;
   -webkit-filter: drop-shadow(5px 5px 5px #666666);
           filter: drop-shadow(5px 5px 5px #666666);
 }
 
-.react-wrapper-desktop .contactMe .resume-wrapper {
+body .react-wrapper-desktop .contactMe .resume-wrapper {
   width: 50vw;
 }
 
-.react-wrapper-desktop .contactMe .resume-wrapper .resume {
+body .react-wrapper-desktop .contactMe .resume-wrapper .resume {
   padding: 2.5vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -826,18 +826,18 @@ body .slide-up {
       justify-content: space-around;
 }
 
-.react-wrapper-desktop .contactMe .resume-wrapper .resume a :hover {
+body .react-wrapper-desktop .contactMe .resume-wrapper .resume a :hover {
   -webkit-filter: grayscale(100);
           filter: grayscale(100);
 }
 
-.react-wrapper-desktop .contactMe .resume-wrapper .resume a img {
+body .react-wrapper-desktop .contactMe .resume-wrapper .resume a img {
   width: 20vw;
   -webkit-filter: drop-shadow(5px 5px 5px #666666);
           filter: drop-shadow(5px 5px 5px #666666);
 }
 
-.react-wrapper-desktop .contactMe .contactMe-text {
+body .react-wrapper-desktop .contactMe .contactMe-text {
   height: 10vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -855,24 +855,24 @@ body .slide-up {
   padding: 5vh;
 }
 
-.react-wrapper-desktop .slide-left {
+body .react-wrapper-desktop .slide-left {
   -webkit-animation: slide-left 0.75s ease-out;
           animation: slide-left 0.75s ease-out;
 }
 
-.react-wrapper-desktop .slide-right {
+body .react-wrapper-desktop .slide-right {
   -webkit-animation: slide-right 0.75s ease-out;
           animation: slide-right 0.75s ease-out;
 }
 
-.hidden {
+body .hidden {
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
   opacity: 0;
   z-index: -1;
 }
 
-.shown {
+body .shown {
   -webkit-transition: all 0.5s ease-in;
   transition: all 0.5s ease-in;
   opacity: 100;
