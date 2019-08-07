@@ -232,10 +232,12 @@ body .react-wrapper-mobile .projects {
 
 body .react-wrapper-mobile .projects nav,
 body .react-wrapper-mobile .projects .nav-list {
-  height: 22.5vh;
+  height: 23.5vh;
 }
 
 body .react-wrapper-mobile .projects .projects-list {
+  position: relative;
+  top: -1vh;
   width: 100vw;
   height: 67.5vh;
   overflow-y: scroll;
@@ -251,13 +253,13 @@ body .react-wrapper-mobile .projects .projects-list .projects-item img {
   -o-object-position: center;
      object-position: center;
   width: 100vw;
-  height: 29vh;
+  height: 96.5%;
 }
 
 body .react-wrapper-mobile .projects .projects-list .projects-item .projects-text {
   position: relative;
-  top: -30vh;
-  height: 30vh;
+  top: -100%;
+  height: 100%;
   background: rgba(255, 255, 255, 0.8);
 }
 
@@ -676,13 +678,17 @@ body .slide-up {
 }
 
 .react-wrapper-desktop .projects .projects-list .projects-item img {
-  border-radius: 20px;
+  border-radius: 10px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
   height: 25vh;
   width: 30vw;
+}
+
+.react-wrapper-desktop .projects .projects-list .projects-item .projects-text {
+  margin-top: 2vh;
 }
 
 .react-wrapper-desktop .projects .projects-list .projects-item .projects-text .title {
