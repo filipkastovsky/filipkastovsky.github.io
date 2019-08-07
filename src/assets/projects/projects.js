@@ -5,10 +5,10 @@ import project3 from './project3.png';
 const PROJECTS = [
   {
     id: 1,
-    title: 'Example React Application',
-    description: 'A React app I built, involving JS and core web dev concepts!',
-    link: 'example1.com',
-    repo: 'github.com',
+    title: 'World Time',
+    description: 'A World Time app built with React JS!',
+    link: 'https://world-time.netlify.com/',
+    repo: 'https://github.com/filipkastovsky/world_time',
     image: project1
   },
   {
