@@ -120,7 +120,7 @@ body .react-wrapper-mobile nav .nav-list {
   font-size: 5vw;
 }
 
-body .react-wrapper-mobile nav .nav-list :hover {
+body .react-wrapper-mobile nav .nav-list .nav-item :hover {
   border-left: solid 4px;
   padding-left: 10px;
 }
@@ -330,18 +330,18 @@ body .react-wrapper-mobile .projects .projects-list .projects-item .projects-tex
   color: white;
 }
 
-body .react-wrapper-mobile .projects .contactMe {
+body .react-wrapper-mobile .contactMe {
   height: 90vh;
   margin-top: 10vh;
   background: #00c2ff;
 }
 
-body .react-wrapper-mobile .projects .contactMe nav,
-body .react-wrapper-mobile .projects .contactMe .nav-list {
+body .react-wrapper-mobile .contactMe nav,
+body .react-wrapper-mobile .contactMe .nav-list {
   height: 22.5vh;
 }
 
-body .react-wrapper-mobile .projects .contactMe .contactMe-list {
+body .react-wrapper-mobile .contactMe .contactMe-list {
   padding: 2.5vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -356,18 +356,18 @@ body .react-wrapper-mobile .projects .contactMe .contactMe-list {
   list-style: none;
 }
 
-body .react-wrapper-mobile .projects .contactMe .contactMe-list .contactMe-item a :hover {
+body .react-wrapper-mobile .contactMe .contactMe-list .contactMe-item a :hover {
   -webkit-filter: grayscale(100);
           filter: grayscale(100);
 }
 
-body .react-wrapper-mobile .projects .contactMe .contactMe-list .contactMe-item a img {
+body .react-wrapper-mobile .contactMe .contactMe-list .contactMe-item a img {
   width: 20vw;
   -webkit-filter: drop-shadow(5px 5px 5px #666666);
           filter: drop-shadow(5px 5px 5px #666666);
 }
 
-body .react-wrapper-mobile .projects .contactMe .resume {
+body .react-wrapper-mobile .contactMe .resume {
   padding: 2.5vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -381,18 +381,18 @@ body .react-wrapper-mobile .projects .contactMe .resume {
       justify-content: space-around;
 }
 
-body .react-wrapper-mobile .projects .contactMe .resume a :hover {
+body .react-wrapper-mobile .contactMe .resume a :hover {
   -webkit-filter: grayscale(100);
           filter: grayscale(100);
 }
 
-body .react-wrapper-mobile .projects .contactMe .resume a img {
+body .react-wrapper-mobile .contactMe .resume a img {
   width: 40vw;
   -webkit-filter: drop-shadow(5px 5px 5px #666666);
           filter: drop-shadow(5px 5px 5px #666666);
 }
 
-body .react-wrapper-mobile .projects .contactMe .contactMe-text {
+body .react-wrapper-mobile .contactMe .contactMe-text {
   height: 10vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -414,12 +414,12 @@ body .react-wrapper-mobile .projects .contactMe .contactMe-text {
   padding: 0 5vh;
 }
 
-body .react-wrapper-mobile .slide-down {
+body .slide-down {
   -webkit-animation: slide-down 0.75s ease-out;
           animation: slide-down 0.75s ease-out;
 }
 
-body .react-wrapper-mobile .slide-up {
+body .slide-up {
   -webkit-animation: slide-up 0.75s ease-out;
           animation: slide-up 0.75s ease-out;
 }

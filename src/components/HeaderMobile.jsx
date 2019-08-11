@@ -35,7 +35,7 @@ class HeaderMobile extends Component {
             <div className="burger-line" />
           </div>
         </header>
-        {this.state.nav ? <NavMobile /> : null}
+        {this.state.nav ? <NavMobile showNav={this.toggleNav} /> : null}
       </div>
     );
   }
