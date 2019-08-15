@@ -56,7 +56,7 @@ const ContactMe = () => {
 
         <div className="resume">
           <a
-            href="https://drive.google.com/file/d/1blJQ3a8QS7ojNXtK5DWAGWMwAoF_PI_k/view?usp=sharing"
+            href="https://drive.google.com/file/d/1_ndo2cdlwtBGE1qDzrVKJSihZvB31thr/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
           >

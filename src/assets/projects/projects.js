@@ -1,6 +1,5 @@
 import project1 from './project1.png';
 import project2 from './project2.png';
-import project3 from './project3.png';
 
 const PROJECTS = [
   {
@@ -13,19 +12,11 @@ const PROJECTS = [
   },
   {
     id: 2,
-    title: 'My API',
-    description: 'A REST API built from scratch using Node JS!',
-    link: 'example2.com',
-    repo: 'github.com',
+    title: 'Top Tracks',
+    description: "An app utilizing Spotify API, searches artists' top tracks",
+    link: 'https://top-tracks.netlify.com',
+    repo: 'https://github.com/filipkastovsky/top_tracks',
     image: project2
-  },
-  {
-    id: 3,
-    title: 'Final project',
-    description: 'My final project!',
-    link: 'example3.com',
-    repo: 'github.com',
-    image: project3
   }
 ];
 
