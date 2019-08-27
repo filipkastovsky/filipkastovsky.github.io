@@ -11,7 +11,7 @@ const Projects = () => {
       </nav>
 
       <ul className="projects-list">
-        {PROJECTS.map(PROJECT => (
+        {PROJECTS.reverse().map(PROJECT => (
           <li className="projects-item" key={PROJECT.id}>
             <img src={PROJECT.image} alt={PROJECT.title} />
             <div className="projects-text">
