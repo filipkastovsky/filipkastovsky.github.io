@@ -1,0 +1,89 @@
+---
+import AstroParticles from "astro-particles";
+import type { ISourceOptions } from "tsparticles-engine";
+
+const options: ISourceOptions = {
+  background: {
+    color: "--color-fill",
+  },
+  fullScreen: {
+    zIndex: -1,
+  },
+  particles: {
+    opacity: {
+      value: 1,
+    },
+    number: {
+      value: 100,
+      density: {
+        enable: true,
+        factor: 1000,
+      },
+    },
+    links: {
+      distance: 125,
+      enable: true,
+      opacity: 0.1,
+      triangles: {
+        enable: true,
+        opacity: 0.02,
+      },
+    },
+    move: {
+      enable: true,
+      speed: 5,
+      direction: "none",
+      decay: 0.05,
+    },
+    size: {
+      value: 1,
+    },
+    shape: {
+      type: "circle",
+    },
+  },
+};
+---
+
+<script>
+  import { tsParticles } from "tsparticles-engine";
+  import { loadFull } from "tsparticles";
+  import { debounce } from "@/utils/debounce";
+
+  // The animation decays over time, however it keeps recalculating on every frame, manually pausing it after it is done moves work off the main thread
+  const ANIMATION_DURATION = 1000;
+
+  const play = () => tsParticles.domItem(0)?.play();
+  const pause = () => tsParticles.domItem(0)?.pause();
+  let currentTimeout: number | undefined;
+
+  const pauseAfterDone = () => {
+    currentTimeout = window.setTimeout(() => {
+      pause();
+    }, ANIMATION_DURATION);
+  };
+
+  const handleResize = () => {
+    clearTimeout(currentTimeout);
+    play();
+    pauseAfterDone();
+  };
+
+  // However restart the animation if the user resizes the window, so the engine can recalculate the particle density and add/remove particles
+  // This also runs on the first load, so the particles are sized correctly
+  const resizeObserver = new ResizeObserver(debounce(handleResize, 100));
+  resizeObserver.observe(document.body);
+
+  // Finally let the particles RIP!
+  (async () => {
+    await loadFull(tsParticles);
+  })();
+</script>
+
+<AstroParticles id="tsparticles" options={options} />
+
+<style is:global>
+  [data-id="tsparticles"] {
+    @apply hidden;
+  }
+</style>

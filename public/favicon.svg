@@ -1,0 +1,8 @@
+<svg width="42" height="26" viewBox="0 0 42 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+        d="M0.88 26V0.872H17.548V5.3H6.28V11.06H16.36V15.488H6.28V26H0.88ZM29.6659 15.524L27.4339 18.656V26H22.0339V0.872H27.4339V11.384H27.7219L30.4579 7.208L34.8859 0.872H40.9339L33.4099 11.492L41.2939 26H35.2099L29.6659 15.524Z"
+        fill="#EAEDF3" />
+    <style>
+        @media (prefers-color-scheme:light){:root{filter:invert(100%)}}
+    </style>
+</svg>

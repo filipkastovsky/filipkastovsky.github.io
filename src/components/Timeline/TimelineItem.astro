@@ -1,0 +1,12 @@
+---
+export type Props = {};
+---
+
+<div class="flex w-full items-center justify-between">
+  <div class="order-1 w-5/12 px-1 text-right">
+    <slot name="left" />
+  </div>
+  <div class="order-1 w-5/12 px-1 text-left">
+    <slot name="right" />
+  </div>
+</div>

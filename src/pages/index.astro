@@ -1,0 +1,68 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import LinkButton from "@/components/LinkButton.astro";
+import Hr from "@/components/Hr.astro";
+import getSortedPosts from "@/utils/getSortedPosts";
+import { Icon } from "astro-icon";
+import slugify from "@/utils/slugify";
+import Card from "@/components/Card";
+import { match } from "ts-pattern";
+import NoPosts from "@/components/NoPosts.astro";
+
+const posts = await getCollection("blog");
+
+const sortedPosts = getSortedPosts(posts);
+---
+
+<Layout>
+  <Header />
+  <main id="main-content">
+    <section id="hero" class="pb-6 pt-8">
+      <h1 class="my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl">
+        Filip Kaštovský
+      </h1>
+      <span>(fɪlɪp kaʃtofski:)</span>
+
+      <p>
+        I build stuff, mostly in TypeScript and Rust. I also write about it,
+        sometimes.
+      </p>
+      <p>This is my website!</p>
+    </section>
+
+    <Hr />
+
+    <section id="recent-posts" class="pb-6 pt-12">
+      <h2 class="text-2xl font-semibold tracking-wide">Blog Posts</h2>
+      {
+        match(sortedPosts)
+          .with([], () => <NoPosts />)
+          .otherwise(() => (
+            <ul>
+              {sortedPosts.slice(0, 4).map(({ data }) => (
+                <Card
+                  href={`/blog/${slugify(data)}`}
+                  frontmatter={data}
+                  secHeading={false}
+                />
+              ))}
+            </ul>
+          ))
+      }
+      <div class="my-8 text-center">
+        <LinkButton href="/blog">
+          All Posts
+          <Icon
+            name="tabler:arrow-right"
+            class="group-hover:animate-bounce-r"
+          />
+        </LinkButton>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

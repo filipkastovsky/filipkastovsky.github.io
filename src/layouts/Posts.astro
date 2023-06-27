@@ -1,0 +1,77 @@
+---
+import { SITE } from "@/config";
+import Layout from "@/layouts/Layout.astro";
+import Main from "@/layouts/Main.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Card from "@/components/Card";
+import LinkButton from "@/components/LinkButton.astro";
+import slugify from "@/utils/slugify";
+import type { CollectionEntry } from "astro:content";
+import { Icon } from "astro-icon";
+import { match } from "ts-pattern";
+import WIP from "@/components/WIP.astro";
+
+export type Props = {
+  pageNum: number;
+  totalPages: number;
+  posts: CollectionEntry<"blog">[];
+};
+
+const { pageNum, totalPages, posts } = Astro.props;
+
+const prev = pageNum > 1 ? "" : "disabled";
+const next = pageNum < totalPages ? "" : "disabled";
+---
+
+<Layout title={`Posts | ${SITE.title}`}>
+  <Header activeNav="blog" />
+  <Main pageTitle="Posts" pageDesc="All the articles I've posted.">
+    {
+      match(posts)
+        .with([], () => <WIP />)
+        .otherwise(p => (
+          <ul>
+            {p.map(({ data }) => (
+              <Card href={`/blog/${slugify(data)}`} frontmatter={data} />
+            ))}
+          </ul>
+        ))
+    }
+  </Main>
+
+  {
+    totalPages > 1 && (
+      <nav class="mb-8 mt-auto flex justify-center" aria-label="Pagination">
+        <LinkButton
+          disabled={prev === "disabled"}
+          href={`/blog${pageNum - 1 !== 1 ? "/" + (pageNum - 1) : ""}`}
+          className={`mr-4 select-none ${prev}`}
+          ariaLabel="Previous"
+        >
+          <Icon name="tabler:arrow-left" class="group-hover:animate-bounce-l" />
+          Prev
+        </LinkButton>
+        <LinkButton
+          disabled={next === "disabled"}
+          href={`/blog/${pageNum + 1}`}
+          className={`ml-4 select-none ${next}`}
+          ariaLabel="Next"
+        >
+          Next
+          <Icon
+            name="tabler:arrow-right"
+            class="group-hover:animate-bounce-r"
+          />
+        </LinkButton>
+      </nav>
+    )
+  }
+  <Footer noMarginTop={totalPages > 1} />
+</Layout>
+
+<style>
+  .disabled {
+    @apply pointer-events-none select-none opacity-50 hover:text-skin-base group-hover:fill-skin-base;
+  }
+</style>
