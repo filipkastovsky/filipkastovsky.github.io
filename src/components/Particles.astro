@@ -49,6 +49,7 @@ const options: ISourceOptions = {
   import { tsParticles } from "tsparticles-engine";
   import { loadFull } from "tsparticles";
   import { debounce } from "@/utils/debounce";
+  import type { Engine } from "tsparticles-engine";
 
   // The animation decays over time, however it keeps recalculating on every frame, manually pausing it after it is done moves work off the main thread
   const ANIMATION_DURATION = 1000;
@@ -74,13 +75,16 @@ const options: ISourceOptions = {
   const resizeObserver = new ResizeObserver(debounce(handleResize, 100));
   resizeObserver.observe(document.body);
 
-  // Finally let the particles RIP!
-  (async () => {
-    await loadFull(tsParticles);
-  })();
+  // Nasty hack to not run into race conditions where the loading particles are not yet loaded, but the engine is already initialized
+  declare global {
+    interface Window {
+      __PARTICLES_INIT__: (engine: Engine) => Promise<void>;
+    }
+  }
+  window.__PARTICLES_INIT__ = loadFull;
 </script>
 
-<AstroParticles id="tsparticles" options={options} />
+<AstroParticles id="tsparticles" options={options} init="__PARTICLES_INIT__" />
 
 <style is:global>
   [data-id="tsparticles"] {
