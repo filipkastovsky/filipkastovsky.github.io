@@ -42,6 +42,8 @@ const socialImageURL = new URL(
     <meta name="description" content={description} />
     <meta name="author" content={author} />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <!-- MPA page transitions are behind a feature flag in chrome (chrome://flags/#view-transition-on-navigation) -->
+    <meta name="view-transition" content="same-origin" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content={title} />
