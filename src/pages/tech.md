@@ -6,7 +6,7 @@ title: "Cool Tech I Use"
 Below you will find a non-exhaustive list of the tech I am (sometimes) proficient in or use on a (almost) daily basis. I will try to keep this list up to date as I find new cool stuff to learn or feel like I have progressed in a technology.
 
 <div class="w-full">
-  <img src="/assets/completed.svg" width="444" height="607" class="sm:w-1/2 mx-auto" alt="task completed">
+  <img src="/assets/completed.svg" width="444" height="607" class="sm:w-1/3 mx-auto" alt="task completed">
 </div>
 
 I will also try to denote my skill level in each technology like so:

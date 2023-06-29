@@ -6,6 +6,7 @@ import Tag from "@/components/Tag.astro";
 import Datetime from "@/components/Datetime";
 import type { CollectionEntry } from "astro:content";
 import { slugifyStr } from "@/utils/slugify";
+import { Icon } from "astro-icon";
 
 export type Props = {
   post: CollectionEntry<"blog">;
@@ -28,11 +29,8 @@ const ogUrl = new URL(ogImage ? ogImage : `${title}.png`, Astro.url.origin)
       class="focus-outline mb-2 mt-8 flex hover:opacity-75"
       onclick="history.back()"
     >
-      <svg xmlns="http://www.w3.org/2000/svg"
-        ><path
-          d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"
-        ></path>
-      </svg><span>Go back</span>
+      <Icon name="tabler:chevron-left" class="mr-2" />
+      <span>Go back</span>
     </button>
   </div>
   <main id="main-content" class="mx-auto w-full max-w-3xl px-4 pb-12">
@@ -48,5 +46,3 @@ const ogUrl = new URL(ogImage ? ogImage : `${title}.png`, Astro.url.origin)
   </main>
   <Footer />
 </Layout>
-
-<style></style>
