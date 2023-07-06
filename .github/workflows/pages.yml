@@ -20,6 +20,9 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+env:
+  PUBLIC_GOOGLE_SITE_VERIFICATION: ${{ secrets.PUBLIC_GOOGLE_SITE_VERIFICATION }}
+
 jobs:
   # Build job
   build:
