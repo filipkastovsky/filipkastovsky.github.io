@@ -27,6 +27,7 @@ const { activeNav } = Astro.props;
     >
       <a
         href="/"
+        rel="prefetch"
         class="absolute py-2 text-xl font-semibold sm:static sm:py-1 sm:text-2xl"
       >
         {SITE.title}
@@ -42,25 +43,38 @@ const { activeNav } = Astro.props;
         </button>
         <ul id="menu-items" class="hidden sm:flex">
           <li>
-            <a href="/blog" class:list={[{ active: activeNav === "blog" }]}>
+            <a
+              href="/blog"
+              rel="prefetch"
+              class:list={[{ active: activeNav === "blog" }]}
+            >
               Blog
             </a>
           </li>
           <li>
-            <a href="/about" class:list={[{ active: activeNav === "about" }]}>
+            <a
+              href="/about"
+              rel="prefetch"
+              class:list={[{ active: activeNav === "about" }]}
+            >
               About
             </a>
           </li>
           <li>
             <a
               href="/journey"
+              rel="prefetch"
               class:list={[{ active: activeNav === "journey" }]}
             >
               Journey
             </a>
           </li>
           <li>
-            <a href="/tech" class:list={[{ active: activeNav === "tech" }]}>
+            <a
+              href="/tech"
+              rel="prefetch"
+              class:list={[{ active: activeNav === "tech" }]}
+            >
               Tech
             </a>
           </li>

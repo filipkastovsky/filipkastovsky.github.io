@@ -52,7 +52,7 @@ Our first instinct might be to build out a component in a way similar to the exa
 
 ## HoCs / render props
 
-Higher order components can still be a lifesaver when reusing code. By allowing ourselves to pass down whichever presentational component will conform to our interface, we essentialy fulfilled our task of allowing code reuse.
+Higher order components can still be a lifesaver when reusing code. By allowing ourselves to pass down whichever presentational component will conform to our interface, we essentially fulfilled our task of allowing code reuse.
 
 ![HoC](/assets/react-wrap/hoc.webp)
 ![Render props](/assets/react-wrap/renderprops.webp)
