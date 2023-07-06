@@ -7,6 +7,8 @@ import { SITE } from "./src/config";
 import solidJs from "@astrojs/solid-js";
 import preact from "@astrojs/preact";
 
+import prefetch from "@astrojs/prefetch";
+
 // https://astro.build/config
 export default defineConfig({
   site: SITE.website,
@@ -19,6 +21,7 @@ export default defineConfig({
     sitemap(),
     solidJs(),
     preact(),
+    prefetch(),
   ],
   markdown: {
     remarkPlugins: [
