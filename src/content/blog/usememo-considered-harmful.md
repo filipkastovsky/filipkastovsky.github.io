@@ -127,7 +127,7 @@ Checking for equality of the dependencies doesn't seem to have any significant i
 
 Memoization is a technique used to reduce the amount of work needed to compute a value. It does so by storing the result of the computation and returning it on subsequent calls. This is a tradeoff between memory and compute time, as we are now storing the result of the computation in memory, which is not free. The question is, how much impact does this have on the memory usage of our app?
 
-Testing memory usage is a lot more tricky then testing how much time does some take take, as the framework itself interferes with the results, you can easily run two instances of the same app and the JS heap usage can differ widely. Rather than exact numbers, we will focus on what happens under the hood and how does the browser handle it.
+Testing memory usage is a lot more tricky then testing how much time does something take, as the framework itself interferes with the results, you can easily run two instances of the same app and the JS heap usage can differ widely. Rather than exact numbers, we will focus on what happens under the hood and how does the browser handle it.
 
 Having a rough idea of how GC works in Chrome (on which these observations will be preformed). A great resource on the topic is [this video](https://www.youtube.com/watch?v=easvMCCBFkQ) by SimonDev and the articles it references.
 
