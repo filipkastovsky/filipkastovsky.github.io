@@ -27,7 +27,7 @@ I will also try to denote my skill level in each technology like so:
 
 ### 🚀 React/Preact & Next.js
 
-Needs no introduction, the most popular frontend framework out there that is going through an identity crisis at the moment. `React` was the first **big** framework I learned and has been with me ever since (I will never forget all the time I spent on optimizing that damn thing)
+Needs no introduction, the most popular frontend framework out there that is going through an identity crisis at the moment. `React` was the first **big** library I learned and has been with me ever since (I will never forget all the time I spent on optimizing that damn thing)
 
 ### 🛫 SolidJS
 
