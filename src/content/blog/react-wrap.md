@@ -14,6 +14,8 @@ tags:
 description: Reusable and easy to maintain React components with `react-wrap`! In this article, we will explore the concepts of coupling, code reuse and how they reflect on the maintainability of a project at as it scales and how to combat the said problems.
 ---
 
+_(Ported from [medium](https://medium.com/))_
+
 ![Thumbnail](/assets/react-wrap/og.webp)
 
 ## Table of contents
