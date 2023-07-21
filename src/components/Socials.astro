@@ -1,46 +1,24 @@
 ---
+import { SOCIALS } from "@/config";
 import LinkButton from "./LinkButton.astro";
-import { Icon } from "astro-icon";
-import { match } from "ts-pattern";
+import SocialIcon from "./SocialIcon.astro";
 
 export type Props = {
   centered?: boolean;
 };
 
 const { centered = false } = Astro.props;
-
-const socials = [
-  {
-    name: "Github",
-    href: "https://github.com/filipkastovsky",
-    linkTitle: `Take a look at my Github`,
-  },
-  {
-    name: "LinkedIn",
-    href: "https://www.linkedin.com/in/filip-kastovsky/",
-    linkTitle: `Visit my LinkedIn`,
-  },
-  {
-    name: "Mail",
-    href: "mailto:devfilipkastovsky@gmail.com",
-    linkTitle: `Send me an email`,
-  },
-] as const;
 ---
 
 <div class:list={["flex-wrap justify-center gap-1", centered && "flex"]}>
   {
-    socials.map(social => (
+    SOCIALS.map(social => (
       <LinkButton
         href={social.href}
         className="p-2 hover:rotate-6 sm:p-1"
         title={social.linkTitle}
       >
-        {match(social.name)
-          .with("Github", () => <Icon name="tabler:brand-github" />)
-          .with("LinkedIn", () => <Icon name="tabler:brand-linkedin" />)
-          .with("Mail", () => <Icon name="tabler:mail" />)
-          .exhaustive()}
+        <SocialIcon name={social.name} />
       </LinkButton>
     ))
   }

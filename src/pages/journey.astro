@@ -9,10 +9,9 @@ import { Icon } from "astro-icon";
 import Footer from "@/components/Footer.astro";
 ---
 
-<Layout title={`Resume | ${SITE.title}`}>
+<Layout title={`Journey | ${SITE.title}`}>
   <Header activeNav="journey" />
   <Breadcrumbs hideOnPrint />
-
   <main id="main-content">
     <section id="timeline" class="prose max-w-3xl prose-img:border-0">
       <h1 class="text-2xl tracking-wider print:hidden sm:text-3xl">
@@ -101,7 +100,23 @@ import Footer from "@/components/Footer.astro";
 
 <script>
   const printButton = document.querySelector("#print-button");
+
   printButton?.addEventListener("click", () => {
-    window.print();
+    const frame = document.createElement("iframe");
+    frame.src = "/resume";
+    frame.style.display = "none";
+
+    document.body.appendChild(frame);
+
+    const frameWindow = frame.contentWindow;
+    if (!frameWindow) {
+      frame.remove();
+      return;
+    }
+
+    frameWindow.addEventListener("afterprint", () => {
+      frame.remove();
+    });
+    frame.contentWindow?.print();
   });
 </script>

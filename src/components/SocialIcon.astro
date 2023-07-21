@@ -1,0 +1,19 @@
+---
+import type { SOCIALS } from "@/config";
+import { Icon } from "astro-icon";
+import { match } from "ts-pattern";
+
+export type Props = {
+  name: (typeof SOCIALS)[number]["name"];
+};
+
+const { name } = Astro.props;
+---
+
+{
+  match(name)
+    .with("Github", () => <Icon name="tabler:brand-github" />)
+    .with("LinkedIn", () => <Icon name="tabler:brand-linkedin" />)
+    .with("Mail", () => <Icon name="tabler:mail" />)
+    .exhaustive()
+}

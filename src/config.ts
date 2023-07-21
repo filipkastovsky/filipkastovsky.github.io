@@ -8,3 +8,23 @@ export const SITE = {
 };
 
 export const LOCALE = ["en-EN"];
+
+export const GITHUB = {
+  name: "Github",
+  href: "https://github.com/filipkastovsky",
+  linkTitle: `Take a look at my Github`,
+} as const;
+
+export const LINKEDIN = {
+  name: "LinkedIn",
+  href: "https://www.linkedin.com/in/filip-kastovsky/",
+  linkTitle: `Visit my LinkedIn`,
+} as const;
+
+export const EMAIL = {
+  name: "Mail",
+  href: "mailto:devfilipkastovsky@gmail.com",
+  linkTitle: `Send me an email`,
+} as const;
+
+export const SOCIALS = [GITHUB, LINKEDIN, EMAIL] as const;

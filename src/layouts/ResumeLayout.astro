@@ -1,0 +1,36 @@
+---
+import { SITE } from "@/config";
+import Footer from "@/components/Footer.astro";
+import Layout from "./Layout.astro";
+import Breadcrumbs from "@/components/Breadcrumbs.astro";
+
+export type Props = {
+  frontmatter: {
+    title: string;
+    description?: string;
+  };
+};
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={`${frontmatter.title} | ${SITE.title}`}>
+  <Breadcrumbs hideOnPrint />
+  <main id="main-content">
+    <section
+      id="cv"
+      class="prose mb-28 max-w-3xl prose-img:border-0 print:max-w-full"
+    >
+      <h1 class="text-2xl tracking-wider sm:text-3xl">{frontmatter.title}</h1>
+      <slot />
+    </section>
+  </main>
+</Layout>
+
+<style>
+  @media print {
+    :root {
+      font-size: 10px;
+    }
+  }
+</style>
