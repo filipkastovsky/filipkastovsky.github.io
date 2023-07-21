@@ -6,10 +6,8 @@ import sitemap from "@astrojs/sitemap";
 import { SITE } from "./src/config";
 import solidJs from "@astrojs/solid-js";
 import preact from "@astrojs/preact";
+import mdx from "@astrojs/mdx";
 
-import prefetch from "@astrojs/prefetch";
-
-// https://astro.build/config
 export default defineConfig({
   site: SITE.website,
   integrations: [
@@ -21,7 +19,9 @@ export default defineConfig({
     sitemap(),
     solidJs(),
     preact(),
-    prefetch(),
+    mdx({
+      gfm: false,
+    }),
   ],
   markdown: {
     remarkPlugins: [
@@ -39,6 +39,7 @@ export default defineConfig({
     },
     extendDefaultPlugins: true,
   },
+
   vite: {
     optimizeDeps: {
       exclude: ["@resvg/resvg-js"],
