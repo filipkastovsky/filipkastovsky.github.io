@@ -231,9 +231,9 @@ Absolutely, especially for larger apps!
 
 ## `useMemo` driven development
 
-`useMemo` enables granular updates when they are needed. React's philosophy dumbs down to _destroy to world and rebuild it from scratch_ on every render (_destroy the subtree_ would be more accurate). It utilizes **VDOM** to make this process as lightweight as possible, but is still far from ideal, as it scales linearly with the number of nodes present in the subtree. **We will take a look at how to squeeze the most performance out of React in an upcoming post!**
+`useMemo` enables granular updates when they are needed. React's philosophy dumbs down to _destroy the world and rebuild it from scratch_ on every render (_destroy the subtree_ would be more accurate). It utilizes **VDOM** to make this process as lightweight as possible, but is still far from ideal, as it scales linearly with the number of nodes present in the subtree. **We will take a look at how to squeeze the most performance out of React in an upcoming post!**
 
-Luckily for us, there is a way to opt out of this behavior, that being `React.memo` which acts as a floodgate for this process, essentially saying _DO NOT UPDATE THIS COMPONENT AND ITS SUBTREE UNLESS ITS DEPENDENCIES_ (props) _CHANGE_. This works fine for primitive type props but breaks down a prop is being passed by reference.
+Luckily for us, there is a way to opt out of this behavior, that being `React.memo` which acts as a floodgate for this process, essentially saying **DO NOT UPDATE THIS COMPONENT AND ITS SUBTREE UNLESS ITS DEPENDENCIES** (props) **CHANGE**. This works fine for primitive type props but breaks down a prop is being passed by reference.
 
 ```tsx
 const Component: FC<{ n?: number, options?: Options, onClick?: MouseEventHandler<HTMLDivElement> }> = (props) => {
@@ -291,13 +291,13 @@ When memoizing properly, we can ensure that references for objects stay the same
 
 ## How to spot optimize
 
-Another secret weapon is now, when all of our references are stable, we gain the superpower of **spot optimization** for free! We can now use `React.memo` on expensive components fearlessly, the equality checks for props will now always work as intended and we can be sure that the component will only rerender when it needs to.
+A secret weapon that we now get for free, when all of our references are stable, is the superpower of **spot optimization**! We can now use `React.memo` on expensive components fearlessly, the equality checks for props will now always work as intended and we can be sure that the component will only rerender when it needs to.
 
-This takes a major burden off of our shoulders and allows us to focus on the problem at hand instead of worrying about the guesswork involved in when do objects change their references and when. All that without hacking away at the `arePropsEqual` parameter of `React.memo`!
+This takes a major burden off of our shoulders and allows us to focus on the problem at hand instead of worrying about the guesswork involved in when do objects change their references ([`why-did-you-render`](https://github.com/welldone-software/why-did-you-render) is a great tool which helps in diagnosing these issues, that you should definitely consider using!). All that without hacking away at the `arePropsEqual` parameter of `React.memo`!
 
-> A common approach to **spot optimization** is to first wrap an component in `React.memo` and then try to track down and memoize component's dependencies one by one. For each dependency then we have to recursively do the same thing over and over again, until we memoize the entire dependency tree.
+> A common approach to **spot optimization** is to first wrap an component in `React.memo` and then try to track down and memoize component's dependencies one by one. For each dependency, we then have to recursively do the same thing over and over again, until we memoize the entire dependency tree.
 
-For larger apps this is simply never an option and even when done correctly, when new dependencies are introduced, the entire process has to be repeated again. This leads to a lot of performance regressions which are notoriously hard to track down and test effectively.
+For larger apps this is simply never an option and even when done correctly, when new dependencies are introduced, the entire process has to be repeated again. This leads to a lot of performance regressions which are notoriously hard to track down effectively.
 
 A much better idea is to set up your project in such a way that these dependency trees are already stabilized and always ready to be memoized. You can also go the extra mile to add `React.memo` to most of your components by default, making even top level updates extremely performant at the cost of a bit of boilerplate.
 

@@ -1,8 +1,8 @@
 ---
-title: Welcome to Just another blog!
+title: Welcome to my blog!
 author: Filip Kastovsky
 pubDatetime: 2023-06-29T11:01:47.268Z
-postSlug: welcome-to-just-another-blog
+postSlug: welcome-to-my-blog
 featured: false
 draft: false
 tags:
