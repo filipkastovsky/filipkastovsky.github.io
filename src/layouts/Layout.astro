@@ -1,6 +1,7 @@
 ---
 import Particles from "@/components/Particles.astro";
 import { SITE } from "@/config";
+import { ViewTransitions } from "astro:transitions";
 import "@/styles/base.css";
 
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
@@ -44,8 +45,10 @@ const socialImageURL = new URL(
     <link rel="sitemap" href="/sitemap-index.xml" />
     <!-- MPA page transitions are behind a feature flag in chrome (chrome://flags/#view-transition-on-navigation) -->
     <meta name="view-transition" content="same-origin" />
+    <ViewTransitions />
 
     <!-- Open Graph / Facebook -->
+    <meta property="og:site_name" content={title} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
